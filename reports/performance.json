@@ -1,0 +1,86 @@
+{
+  "configuration": {
+    "systeme": "Windows 11",
+    "processeur": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "coeurs_logiques": 8,
+    "python": "3.14.6",
+    "scikit-learn": "1.9.1",
+    "serveur": "uvicorn, 1 processus, HTTP local 127.0.0.1",
+    "methode": "time.perf_counter, 50 itérations d'échauffement exclues"
+  },
+  "objectifs": {
+    "p95_api_ms": 200,
+    "debit_min_req_s": 20,
+    "taux_erreur_max": 0.0
+  },
+  "inference_modele_seul_ms": {
+    "moyenne": 2.52,
+    "p50": 1.99,
+    "p95": 4.44,
+    "p99": 8.6
+  },
+  "inference_pretraitement_compris_ms": {
+    "moyenne": 3.6,
+    "p50": 3.42,
+    "p95": 5.35,
+    "p99": 6.89
+  },
+  "api_sequentielle_ms": {
+    "moyenne": 10.83,
+    "p50": 10.18,
+    "p95": 16.63,
+    "p99": 19.61
+  },
+  "charge_progressive": [
+    {
+      "utilisateurs": 1,
+      "requetes": 100,
+      "debit_req_s": 92.3,
+      "taux_erreur": 0.0,
+      "moyenne": 10.63,
+      "p50": 10.45,
+      "p95": 12.92,
+      "p99": 13.63
+    },
+    {
+      "utilisateurs": 2,
+      "requetes": 200,
+      "debit_req_s": 118.6,
+      "taux_erreur": 0.0,
+      "moyenne": 16.57,
+      "p50": 16.01,
+      "p95": 21.76,
+      "p99": 26.97
+    },
+    {
+      "utilisateurs": 4,
+      "requetes": 400,
+      "debit_req_s": 128.1,
+      "taux_erreur": 0.0,
+      "moyenne": 30.67,
+      "p50": 30.21,
+      "p95": 40.41,
+      "p99": 45.89
+    },
+    {
+      "utilisateurs": 8,
+      "requetes": 800,
+      "debit_req_s": 127.7,
+      "taux_erreur": 0.0,
+      "moyenne": 61.87,
+      "p50": 61.45,
+      "p95": 81.18,
+      "p99": 97.02
+    },
+    {
+      "utilisateurs": 16,
+      "requetes": 1600,
+      "debit_req_s": 126.2,
+      "taux_erreur": 0.0,
+      "moyenne": 125.65,
+      "p50": 122.81,
+      "p95": 168.85,
+      "p99": 194.84
+    }
+  ]
+}
