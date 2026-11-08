@@ -2,7 +2,7 @@
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-AGE_MIN, AGE_MAX = 18, 75
+AGE_MIN, AGE_MAX = 16, 75
 AGE_MIN_ACTIVITE = 16  # âge minimal plausible de début d'activité
 
 
