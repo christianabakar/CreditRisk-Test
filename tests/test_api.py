@@ -17,7 +17,9 @@ def test_model_info_metadonnees(client):
     r = client.get("/model-info")
     assert r.status_code == 200
     info = r.json()
-    assert info["version"] == "1.0.0"
+    assert info["version"] == client.post("/predict", json={
+        "age": 35, "revenu_mensuel": 250000, "montant_credit": 1000000,
+        "duree_mois": 12, "anciennete_activite": 4}).json()["version_modele"]
     assert info["variables"][:5] == ["age", "revenu_mensuel", "montant_credit",
                                      "duree_mois", "anciennete_activite"]
     assert set(info["metriques_reference"]) >= {"recall", "f1"}

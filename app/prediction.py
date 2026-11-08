@@ -60,12 +60,17 @@ class ServiceModele:
         return self.paquet["pipeline"].predict_proba(X)[:, 1]
 
     def alertes(self, donnees: pd.DataFrame) -> list[str]:
-        """Entrées valides mais inhabituelles : hors de la plage d'entraînement."""
+        """Entrées valides mais inhabituelles : hors de la plage d'entraînement.
+
+        Contrôle les variables brutes ET dérivées (correction ANO-01 : une combinaison
+        de valeurs individuellement normales peut produire un taux d'effort extrême).
+        """
         self._exiger_modele()
+        X = preprocess(donnees)
         plages = self.paquet["plages_entrainement"]
         return [f"{v} hors de la plage d'entraînement"
                 for v, (mini, maxi) in plages.items()
-                if not (mini <= float(donnees[v].iloc[0]) <= maxi)]
+                if not (mini <= float(X[v].iloc[0]) <= maxi)]
 
 
 def niveau_risque(probabilite: float) -> str:

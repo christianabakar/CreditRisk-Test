@@ -46,7 +46,7 @@ def evaluer(pipeline, X_test, y_test, seuil=0.5):
 
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
-    args.add_argument("--version", default="1.0.0")
+    args.add_argument("--version", default="1.1.0")
     args.add_argument("--C", type=float, default=1.0)
     args.add_argument("--class-weight", default="balanced")
     args.add_argument("--sortie", default="models/model_v1.joblib")
@@ -55,6 +55,7 @@ if __name__ == "__main__":
 
     X_train, X_test, y_train, y_test = charger_et_decouper()
     pipeline = entrainer(X_train, y_train, C=a.C, class_weight=cw)
+    X_pre = preprocess(X_train)
     metriques = {k: round(float(v), 4) for k, v in evaluer(pipeline, X_test, y_test).items()}
 
     paquet = {
@@ -63,8 +64,8 @@ if __name__ == "__main__":
         "date_entrainement": datetime.now(UTC).date().isoformat(),
         "variables": VARIABLES_MODELE, "sklearn_version": sklearn.__version__,
         "graine": GRAINE, "metriques": metriques,
-        "plages_entrainement": {v: (float(X_train[v].min()), float(X_train[v].max()))
-                                for v in VARIABLES_BRUTES},
+        "plages_entrainement": {v: (float(X_pre[v].min()), float(X_pre[v].max()))
+                                for v in VARIABLES_MODELE},
     }
     Path(a.sortie).parent.mkdir(exist_ok=True)
     joblib.dump(paquet, a.sortie)

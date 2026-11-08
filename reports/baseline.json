@@ -1,0 +1,432 @@
+{
+  "date_creation": "2026-11-08",
+  "version_modele": "1.0.0",
+  "parametres": {
+    "C": 1.0,
+    "class_weight": "balanced"
+  },
+  "versions_bibliotheques": {
+    "python": "3.14.6",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.1.1"
+  },
+  "graine": 42,
+  "criteres_acceptation": {
+    "recall_min": 0.7,
+    "f1_min": 0.6
+  },
+  "tolerances": {
+    "recall": 0.03,
+    "f1": 0.03,
+    "roc_auc": 0.02
+  },
+  "tolerance_probabilite": 0.02,
+  "metriques_test": {
+    "recall": 0.7266881028938906,
+    "f1": 0.6838124054462935,
+    "precision": 0.6457142857142857,
+    "roc_auc": 0.885912015587493
+  },
+  "demandes_reference": [
+    {
+      "age": 62,
+      "revenu_mensuel": 223000.0,
+      "montant_credit": 1710000.0,
+      "duree_mois": 36,
+      "anciennete_activite": 17,
+      "probabilite_defaut": 0.14175529442473442
+    },
+    {
+      "age": 64,
+      "revenu_mensuel": 116000.0,
+      "montant_credit": 930000.0,
+      "duree_mois": 24,
+      "anciennete_activite": 21,
+      "probabilite_defaut": 0.092077597085691
+    },
+    {
+      "age": 49,
+      "revenu_mensuel": 209000.0,
+      "montant_credit": 1330000.0,
+      "duree_mois": 24,
+      "anciennete_activite": 17,
+      "probabilite_defaut": 0.12087013378683166
+    },
+    {
+      "age": 41,
+      "revenu_mensuel": 107000.0,
+      "montant_credit": 530000.0,
+      "duree_mois": 24,
+      "anciennete_activite": 25,
+      "probabilite_defaut": 0.06570640206187328
+    },
+    {
+      "age": 61,
+      "revenu_mensuel": 333000.0,
+      "montant_credit": 2810000.0,
+      "duree_mois": 24,
+      "anciennete_activite": 29,
+      "probabilite_defaut": 0.06023088102461141
+    },
+    {
+      "age": 44,
+      "revenu_mensuel": 199000.0,
+      "montant_credit": 1520000.0,
+      "duree_mois": 3,
+      "anciennete_activite": 24,
+      "probabilite_defaut": 0.9878422859873156
+    },
+    {
+      "age": 22,
+      "revenu_mensuel": 196000.0,
+      "montant_credit": 2280000.0,
+      "duree_mois": 12,
+      "anciennete_activite": 1,
+      "probabilite_defaut": 0.8105008195473637
+    },
+    {
+      "age": 25,
+      "revenu_mensuel": 158000.0,
+      "montant_credit": 560000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 6,
+      "probabilite_defaut": 0.2111152148639719
+    },
+    {
+      "age": 21,
+      "revenu_mensuel": 171000.0,
+      "montant_credit": 690000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 5,
+      "probabilite_defaut": 0.2520099691366254
+    },
+    {
+      "age": 20,
+      "revenu_mensuel": 107000.0,
+      "montant_credit": 370000.0,
+      "duree_mois": 9,
+      "anciennete_activite": 4,
+      "probabilite_defaut": 0.29220206763597456
+    },
+    {
+      "age": 50,
+      "revenu_mensuel": 152000.0,
+      "montant_credit": 1360000.0,
+      "duree_mois": 9,
+      "anciennete_activite": 2,
+      "probabilite_defaut": 0.7057751217566625
+    },
+    {
+      "age": 61,
+      "revenu_mensuel": 91000.0,
+      "montant_credit": 1000000.0,
+      "duree_mois": 3,
+      "anciennete_activite": 28,
+      "probabilite_defaut": 0.999485604101362
+    },
+    {
+      "age": 51,
+      "revenu_mensuel": 131000.0,
+      "montant_credit": 440000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 25,
+      "probabilite_defaut": 0.04071548323612525
+    },
+    {
+      "age": 39,
+      "revenu_mensuel": 205000.0,
+      "montant_credit": 450000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 10,
+      "probabilite_defaut": 0.1107453828489493
+    },
+    {
+      "age": 35,
+      "revenu_mensuel": 195000.0,
+      "montant_credit": 2060000.0,
+      "duree_mois": 36,
+      "anciennete_activite": 0,
+      "probabilite_defaut": 0.5355626811106842
+    },
+    {
+      "age": 48,
+      "revenu_mensuel": 204000.0,
+      "montant_credit": 1470000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 1,
+      "probabilite_defaut": 0.35085039179527083
+    },
+    {
+      "age": 56,
+      "revenu_mensuel": 297000.0,
+      "montant_credit": 2820000.0,
+      "duree_mois": 12,
+      "anciennete_activite": 11,
+      "probabilite_defaut": 0.4002920146640767
+    },
+    {
+      "age": 27,
+      "revenu_mensuel": 206000.0,
+      "montant_credit": 1940000.0,
+      "duree_mois": 12,
+      "anciennete_activite": 11,
+      "probabilite_defaut": 0.5030909705969699
+    },
+    {
+      "age": 52,
+      "revenu_mensuel": 265000.0,
+      "montant_credit": 2600000.0,
+      "duree_mois": 3,
+      "anciennete_activite": 18,
+      "probabilite_defaut": 0.9992821461736543
+    },
+    {
+      "age": 19,
+      "revenu_mensuel": 258000.0,
+      "montant_credit": 290000.0,
+      "duree_mois": 36,
+      "anciennete_activite": 3,
+      "probabilite_defaut": 0.32944935647909845
+    },
+    {
+      "age": 36,
+      "revenu_mensuel": 263000.0,
+      "montant_credit": 3150000.0,
+      "duree_mois": 3,
+      "anciennete_activite": 0,
+      "probabilite_defaut": 0.9999875010377045
+    },
+    {
+      "age": 67,
+      "revenu_mensuel": 64000.0,
+      "montant_credit": 260000.0,
+      "duree_mois": 24,
+      "anciennete_activite": 2,
+      "probabilite_defaut": 0.1818323613282723
+    },
+    {
+      "age": 42,
+      "revenu_mensuel": 489000.0,
+      "montant_credit": 3620000.0,
+      "duree_mois": 6,
+      "anciennete_activite": 6,
+      "probabilite_defaut": 0.8152172790049127
+    },
+    {
+      "age": 38,
+      "revenu_mensuel": 174000.0,
+      "montant_credit": 2090000.0,
+      "duree_mois": 6,
+      "anciennete_activite": 22,
+      "probabilite_defaut": 0.9479305473866376
+    },
+    {
+      "age": 52,
+      "revenu_mensuel": 317000.0,
+      "montant_credit": 720000.0,
+      "duree_mois": 24,
+      "anciennete_activite": 22,
+      "probabilite_defaut": 0.048779731304232785
+    },
+    {
+      "age": 60,
+      "revenu_mensuel": 323000.0,
+      "montant_credit": 3070000.0,
+      "duree_mois": 36,
+      "anciennete_activite": 26,
+      "probabilite_defaut": 0.09538214722562943
+    },
+    {
+      "age": 54,
+      "revenu_mensuel": 647000.0,
+      "montant_credit": 2980000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 26,
+      "probabilite_defaut": 0.0477085197568012
+    },
+    {
+      "age": 38,
+      "revenu_mensuel": 192000.0,
+      "montant_credit": 1080000.0,
+      "duree_mois": 3,
+      "anciennete_activite": 21,
+      "probabilite_defaut": 0.9178073199867878
+    },
+    {
+      "age": 58,
+      "revenu_mensuel": 202000.0,
+      "montant_credit": 1260000.0,
+      "duree_mois": 3,
+      "anciennete_activite": 9,
+      "probabilite_defaut": 0.9754669612171228
+    },
+    {
+      "age": 63,
+      "revenu_mensuel": 412000.0,
+      "montant_credit": 430000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 22,
+      "probabilite_defaut": 0.02807802639057703
+    },
+    {
+      "age": 44,
+      "revenu_mensuel": 338000.0,
+      "montant_credit": 870000.0,
+      "duree_mois": 24,
+      "anciennete_activite": 10,
+      "probabilite_defaut": 0.12798592262865718
+    },
+    {
+      "age": 49,
+      "revenu_mensuel": 150000.0,
+      "montant_credit": 1430000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 17,
+      "probabilite_defaut": 0.20222380347342905
+    },
+    {
+      "age": 18,
+      "revenu_mensuel": 244000.0,
+      "montant_credit": 310000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 2,
+      "probabilite_defaut": 0.2078901521158511
+    },
+    {
+      "age": 33,
+      "revenu_mensuel": 282000.0,
+      "montant_credit": 2670000.0,
+      "duree_mois": 12,
+      "anciennete_activite": 17,
+      "probabilite_defaut": 0.3790133686542662
+    },
+    {
+      "age": 54,
+      "revenu_mensuel": 95000.0,
+      "montant_credit": 650000.0,
+      "duree_mois": 24,
+      "anciennete_activite": 1,
+      "probabilite_defaut": 0.3034594160891603
+    },
+    {
+      "age": 47,
+      "revenu_mensuel": 327000.0,
+      "montant_credit": 330000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 22,
+      "probabilite_defaut": 0.0353800194672629
+    },
+    {
+      "age": 26,
+      "revenu_mensuel": 194000.0,
+      "montant_credit": 1240000.0,
+      "duree_mois": 3,
+      "anciennete_activite": 10,
+      "probabilite_defaut": 0.9864058354559871
+    },
+    {
+      "age": 46,
+      "revenu_mensuel": 274000.0,
+      "montant_credit": 2640000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 8,
+      "probabilite_defaut": 0.3478243056267423
+    },
+    {
+      "age": 40,
+      "revenu_mensuel": 309000.0,
+      "montant_credit": 3240000.0,
+      "duree_mois": 24,
+      "anciennete_activite": 10,
+      "probabilite_defaut": 0.32440228285376055
+    },
+    {
+      "age": 39,
+      "revenu_mensuel": 427000.0,
+      "montant_credit": 3710000.0,
+      "duree_mois": 9,
+      "anciennete_activite": 23,
+      "probabilite_defaut": 0.37085932889710876
+    },
+    {
+      "age": 26,
+      "revenu_mensuel": 262000.0,
+      "montant_credit": 1290000.0,
+      "duree_mois": 12,
+      "anciennete_activite": 10,
+      "probabilite_defaut": 0.23692071970673398
+    },
+    {
+      "age": 40,
+      "revenu_mensuel": 191000.0,
+      "montant_credit": 1190000.0,
+      "duree_mois": 6,
+      "anciennete_activite": 17,
+      "probabilite_defaut": 0.488067908685977
+    },
+    {
+      "age": 28,
+      "revenu_mensuel": 128000.0,
+      "montant_credit": 1250000.0,
+      "duree_mois": 9,
+      "anciennete_activite": 4,
+      "probabilite_defaut": 0.7986296518038934
+    },
+    {
+      "age": 58,
+      "revenu_mensuel": 171000.0,
+      "montant_credit": 600000.0,
+      "duree_mois": 9,
+      "anciennete_activite": 23,
+      "probabilite_defaut": 0.054705890095367776
+    },
+    {
+      "age": 44,
+      "revenu_mensuel": 142000.0,
+      "montant_credit": 540000.0,
+      "duree_mois": 36,
+      "anciennete_activite": 28,
+      "probabilite_defaut": 0.06325692956062039
+    },
+    {
+      "age": 60,
+      "revenu_mensuel": 174000.0,
+      "montant_credit": 1530000.0,
+      "duree_mois": 6,
+      "anciennete_activite": 30,
+      "probabilite_defaut": 0.534224132930595
+    },
+    {
+      "age": 31,
+      "revenu_mensuel": 215000.0,
+      "montant_credit": 690000.0,
+      "duree_mois": 36,
+      "anciennete_activite": 4,
+      "probabilite_defaut": 0.3144668411827932
+    },
+    {
+      "age": 23,
+      "revenu_mensuel": 127000.0,
+      "montant_credit": 1310000.0,
+      "duree_mois": 18,
+      "anciennete_activite": 7,
+      "probabilite_defaut": 0.4787761640342222
+    },
+    {
+      "age": 68,
+      "revenu_mensuel": 134000.0,
+      "montant_credit": 460000.0,
+      "duree_mois": 9,
+      "anciennete_activite": 6,
+      "probabilite_defaut": 0.14281287056305647
+    },
+    {
+      "age": 46,
+      "revenu_mensuel": 431000.0,
+      "montant_credit": 3840000.0,
+      "duree_mois": 3,
+      "anciennete_activite": 29,
+      "probabilite_defaut": 0.9963243921971138
+    }
+  ]
+}

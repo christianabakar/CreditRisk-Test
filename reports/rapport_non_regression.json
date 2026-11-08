@@ -1,0 +1,42 @@
+{
+  "baseline": "1.0.0",
+  "candidats": {
+    "v1.1.0 : correction ANO-01 (alertes sur variables dérivées)": {
+      "decision": "ACCEPTER",
+      "motifs": [],
+      "metriques": {
+        "recall": 0.7266881028938906,
+        "f1": 0.6838124054462935,
+        "precision": 0.6457142857142857,
+        "roc_auc": 0.885912015587493
+      },
+      "ecart_probabilite_max": 0.0
+    },
+    "v2-a : sans pondération des classes (class_weight=None)": {
+      "decision": "REJETER",
+      "motifs": [
+        "rappel 0.592 < 0.7"
+      ],
+      "metriques": {
+        "recall": 0.5916398713826366,
+        "f1": 0.6930320150659134,
+        "precision": 0.8363636363636363,
+        "roc_auc": 0.8857955887942636
+      },
+      "ecart_probabilite_max": 0.26752642100429086
+    },
+    "v2-b : régularisation très forte (C=0,001)": {
+      "decision": "INVESTIGUER",
+      "motifs": [
+        "écart de probabilité 0.2712 > 0.02"
+      ],
+      "metriques": {
+        "recall": 0.7234726688102894,
+        "f1": 0.684931506849315,
+        "precision": 0.6502890173410405,
+        "roc_auc": 0.8763068051460643
+      },
+      "ecart_probabilite_max": 0.2711764724930069
+    }
+  }
+}
