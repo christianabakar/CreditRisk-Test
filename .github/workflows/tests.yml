@@ -1,0 +1,48 @@
+name: Tests CreditRisk
+
+on:
+  push:
+    branches: [main]
+  pull_request:          # tests à chaque Pull Request (exigence de l'énoncé)
+  workflow_dispatch:
+
+permissions:
+  contents: read         # moindre privilège
+
+jobs:
+  qualite:
+    name: Style + tests + couverture
+    runs-on: ubuntu-24.04   # version figée pour la reproductibilité
+    timeout-minutes: 15
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Python 3.14
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Vérifier le style (Ruff)
+        run: ruff check . --output-format=github
+
+      - name: Lancer les tests avec couverture
+        run: >
+          pytest -v
+          --cov=app --cov-report=term-missing --cov-report=xml:reports/couverture.xml
+          --cov-fail-under=80
+          --junitxml=reports/rapport_tests.xml
+
+      - name: Archiver les rapports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapports-de-test
+          path: |
+            reports/rapport_tests.xml
+            reports/couverture.xml
