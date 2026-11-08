@@ -28,3 +28,11 @@ def client_sans_modele():
     with TestClient(app, raise_server_exceptions=False) as c:
         yield c
     app.dependency_overrides.clear()
+
+
+
+@pytest.fixture
+def client_erreurs():
+    """Client qui RENVOIE les réponses 500 au lieu de relancer l'exception (vue du client)."""
+    with TestClient(app, raise_server_exceptions=False) as c:
+        yield c
